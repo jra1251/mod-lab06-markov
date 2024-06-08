@@ -1,7 +1,7 @@
 // Copyright 2024 Shelnov Yuriy
 #include <gtest/gtest.h>
 
-#include "Texthen.h"
+#include "textgen.h"
 TEST(task1, test1) {
     TextGenerator Tg = TextGenerator("test.txt", NPREF);
     int result = Tg.getPrefixSize();
