@@ -58,12 +58,12 @@ std::string TextGenerator::getText(int wordPoolamount) {
     for (int i = prLenhtg; i < words - prLenhtg; i++) {
         std::vector <std::string> Suffix = stateTable.at(currentPrefixes);
 
-        if (currentSuffix.size() == 0)
+        if (Suffix.size() == 0)
             break;
-        int index = rand_r() % currentSuffix.size();
-        result += currentSuffix[index] + " ";
+        int index = rand_r() % Suffix .size();
+        result += Suffix [index] + " ";
         currentPrefixes.erase(currentPrefixes.begin());
-        currentPrefixes.push_back(currentSuffix[index]);
+        currentPrefixes.push_back(Suffix [index]);
     }
     return result;
 }
