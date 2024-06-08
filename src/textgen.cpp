@@ -55,7 +55,7 @@ std::string TextGenerator::getText(int wordPoolamount) {
     std::string result = currentPrefixes[0] + " " + currentPrefixes[1] + " ";
     int words = wordPoolamount;
     int prLenhtg;
-    for (int i = prLenhtg;; i < words - prLenhtg;; i++) {
+    for (int i = prLenhtg; i < words - prLenhtg; i++) {
         std::vector <std::string> Suffix = stateTable.at(currentPrefixes);
 
         if (currentSuffix.size() == 0)
