@@ -34,15 +34,15 @@ TextGenerator::TextGenerator(std::string InputFile, int preflen) {
 
 
 void TextGenerator::WriteOnFileGenerateText(int wordPoolamount) {
-   std::string File_name = "output_file.txt";
-   std::ofstream file;
-   file.open(File_name);
-   if (file.is_open()) {
-       file << getText(wordPoolamount);
-       file.close();
-   } else {
-       std::cout << "Ïðîèçîøëà îøèáêà ïðè îòêðûòèè ôàéëà" << std::endl;
-   }
+    std::string File_name = "output_file.txt";
+    std::ofstream file;
+    file.open(File_name);
+    if (file.is_open()) {
+        file << getText(wordPoolamount);
+        file.close();
+    } else {
+        std::cout << "Произошла ошибка при открытии файла" << std::endl;
+    }
 }
 
 std::string TextGenerator::getText(int wordPoolamount) {
@@ -53,8 +53,9 @@ std::string TextGenerator::getText(int wordPoolamount) {
     srand(time(NULL));
 
     std::string result = currentPrefixes[0] + " " + currentPrefixes[1] + " ";
-
-    for (int i = currentPrefixLength; i < wordPoolamount - currentPrefixLength; i++) {
+    int words = wordPoolamount;
+    int prLenhtg;
+    for (int i = prLenhtg;; i < words - prLenhtg;; i++) {
         std::vector <std::string> currentSuffix = stateTable.at(currentPrefixes);
 
         if (currentSuffix.size() == 0)
