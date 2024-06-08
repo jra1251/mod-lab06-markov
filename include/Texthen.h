@@ -14,12 +14,12 @@ const int INITIAL_PREFIX_SIZE = 2;
 const int GENERATION_LIMIT = 1000;
 
 class TextGenerator {
-private :
+ private:
     int currentPrefixLength;
     typedef std::deque<std::string> prefix;
     std::map<prefix, std::vector<std::string> > stateTable;
     std::vector<std::string> wordPool;
-public :
+ public:
     TextGenerator(std::string InputFile, int preflen);
     std::string getText(int wordPoolamount);
     int getÑurrentPrefixLength();
