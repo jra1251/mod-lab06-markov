@@ -4,7 +4,6 @@
 TextGenerator::TextGenerator(std::string InputFile, int preflen) {
     currentPrefixLength = preflen;
     std::ifstream file(InputFile);
-   
     std::string s;
     for (file >> s; !file.eof(); file >> s) {
         wordPool.push_back(s);
@@ -34,8 +33,7 @@ TextGenerator::TextGenerator(std::string InputFile, int preflen) {
 
 
 
-void TextGenerator::WriteOnFileGenerateText(int wordPoolamount)
-{
+void TextGenerator::WriteOnFileGenerateText(int wordPoolamount) {
    std::string File_name = "output_file.txt";
    std::ofstream file;
    file.open(File_name);
@@ -45,8 +43,6 @@ void TextGenerator::WriteOnFileGenerateText(int wordPoolamount)
    } else {
        std::cout << "Ïðîèçîøëà îøèáêà ïðè îòêðûòèè ôàéëà" << std::endl;
    }
-    
-
 }
 
 std::string TextGenerator::getText(int wordPoolamount) {
@@ -63,13 +59,11 @@ std::string TextGenerator::getText(int wordPoolamount) {
 
         if (currentSuffix.size() == 0)
             break;
-
         int index = rand_r() % currentSuffix.size();
         result += currentSuffix[index] + " ";
         currentPrefixes.erase(currentPrefixes.begin());
         currentPrefixes.push_back(currentSuffix[index]);
     }
-
     return result;
 }
 
@@ -81,7 +75,6 @@ std::string TextGenerator::getSuffix(std::deque<std::string> prefdeq) {
     prefix prefixes;
     for (int i = 0; i < prefdeq.size(); i++)
         prefixes.push_back(prefdeq[i]);
-
     srand(time(NULL));
     std::vector <std::string> suffix = stateTable.at(prefixes);
     int index = rand_r() % suffix.size();
