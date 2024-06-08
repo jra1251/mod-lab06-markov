@@ -1,3 +1,4 @@
+// Copyright 2024 Shelnov Yuriy
 #pragma once
 
 #include <stdio.h>
@@ -21,7 +22,7 @@ private:
 public:
     TextGenerator(std::string InputFile, int preflen);
     std::string getText(int wordPoolamount);
-    int get—urrentPrefixLength();
+    int get√ëurrentPrefixLength();
     std::string getSuffix(std::deque<std::string> prefdeq);
     void WriteOnFileGenerateText(int wordPoolamount);
 };
