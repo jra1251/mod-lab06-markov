@@ -1,3 +1,4 @@
+// Copyright 2024 Shelnov Yuriy
 #include "Texthen.h"
 
 TextGenerator::TextGenerator(std::string InputFile, int preflen) {
@@ -42,7 +43,7 @@ void TextGenerator::WriteOnFileGenerateText(int wordPoolamount)
        file << getText(wordPoolamount);
        file.close();
    } else {
-       std::cout << "Ïðîèçîøëà îøèáêà ïðè îòêðûòèè ôàéëà" << std::endl;
+       std::cout << "ÃÃ°Ã®Ã¨Ã§Ã®Ã¸Ã«Ã  Ã®Ã¸Ã¨Ã¡ÃªÃ  Ã¯Ã°Ã¨ Ã®Ã²ÃªÃ°Ã»Ã²Ã¨Ã¨ Ã´Ã Ã©Ã«Ã " << std::endl;
    }
     
 
@@ -72,7 +73,7 @@ std::string TextGenerator::getText(int wordPoolamount) {
     return result;
 }
 
-int TextGenerator::getÑurrentPrefixLength() {
+int TextGenerator::getÃ‘urrentPrefixLength() {
     return currentPrefixLength;
 }
 
