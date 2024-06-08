@@ -1,5 +1,5 @@
 // Copyright 2024 Shelnov Yuriy
-#include "Texthen.h"
+#include "textgen.h"
 
 TextGenerator::TextGenerator(std::string InputFile, int preflen) {
     currentPrefixLength = preflen;
