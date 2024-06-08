@@ -1,5 +1,5 @@
 // Copyright 2024 Shelnov Yuriy
-#include "Texthen.h"
+#include "textgen.h"
 #include"locale.h"
 
 const int NPREF = 2;
