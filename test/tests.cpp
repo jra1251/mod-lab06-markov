@@ -1,4 +1,4 @@
-
+// Copyright 2024 Shelnov Yuriy
 #include <gtest/gtest.h>
 
 #include "Texthen.h"
