@@ -68,7 +68,7 @@ std::string TextGenerator::getText(int wordPoolamount) {
     return result;
 }
 
-int TextGenerator::getÑurrentPrefixLength() {
+int TextGenerator::getCurrentPrefixLength() {
     return currentPrefixLength;
 }
 

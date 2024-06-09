@@ -22,7 +22,7 @@ class TextGenerator {
  public:
     TextGenerator(std::string InputFile, int preflen);
     std::string getText(int wordPoolamount);
-    int getÑurrentPrefixLength();
+    int geCurrentPrefixLength();
     std::string getSuffix(std::deque<std::string> prefdeq);
     void WriteOnFileGenerateText(int wordPoolamount);
 };
