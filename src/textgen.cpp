@@ -61,9 +61,9 @@ std::string TextGenerator::getText(int wordPoolamount) {
         if (Suffix.size() == 0)
             break;
         int index = rand_r() % Suffix .size();
-        result += Suffix [index] + " ";
+        result += Suffix[index] + " ";
         currentPrefixes.erase(currentPrefixes.begin());
-        currentPrefixes.push_back(Suffix [index]);
+        currentPrefixes.push_back(Suffix[index]);
     }
     return result;
 }
