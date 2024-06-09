@@ -4,7 +4,7 @@
 #include "textgen.h"
 TEST(task1, test1) {
     TextGenerator Tg = TextGenerator("test.txt", 2);
-    int result = Tg.getСurrentPrefixLength();
+    int result = Tg.getCurrentPrefixLength();
     EXPECT_EQ(2, result);
 }
 
